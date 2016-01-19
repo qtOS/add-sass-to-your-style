@@ -39,7 +39,7 @@ html, body{
     position: fixed;
     top: 12.25%;
     //background-color: rgba(40, 40, 50, .5);
-    overflow-y: hidden;
+    overflow: hidden;
     text-align: center;
 
     //the walls to our foundation
@@ -85,19 +85,19 @@ html, body{
         }
         //ROOM TWO
         #info-container{
-          width: 95%;
+          width: 100%;
           height: 100%;
           background-color: rgba(2, 2, 2, .6);
-          padding: 0 2.5%;
 
           article{
             margin: 0;
             width: 65%;
             height: 80%;
-            background-color: red;
+            background-color: rgba(150, 150, 150, .8);;
             float: left;
             margin-top: 7.5vh;
             overflow-y: auto;
+            margin-right: 2vh;
 
             h1, p{
               margin: 0;
@@ -113,14 +113,73 @@ html, body{
             margin: 0;
             width: 25%;
             height: 80%;
-            background-color: blue;
             float: right;
             margin-top: 7.5vh;
+            border-radius: 2px;
+            opacity: .05;
+            margin-right: 5%;
+            @include resizableBackground('../imgs/fungus.jpg');
+            // set mixin animation
+            @include setAnimation(opacity, 250ms, linear);
+
+            &:hover{
+              //set for off hover
+              @include setAnimation(opacity, 500ms, linear);
+              //theres that bg mixin
+              @include resizableBackground('../imgs/fungus.jpg');
+              opacity: 1;
+            }
+          }
+          clear: both;
+          //inserting clear here to fix float issues
+        }
+        //it ought to be hitting all LI tags
+        //ROOM THREE
+        #updates-container{
+          width: 100%;
+          height: 100%;
+          //background-color: rgba(2, 2, 2, .9);
+
+          h1{
+            width: 100%;
+            background-color: rgba(150, 150, 150, .5);;
+            color: $theColourWhite;
+            //prevents weird bugs with the order list including margin issues
+            position: absolute;
+          }
+          ol{
+            margin: 0;
+            padding: 0;
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+
+
+            li{
+              width: 20%;
+              min-width: 150px;
+              height: 25%;
+              margin: 1.5vh 2vh 0;
+              display: inline-flex;
+              border-radius: 50%;
+              border: 2px $theColourWhite solid;
+              box-sizing: border-box;
+              background-color: rgba(15, 100, 22, .7);
+              //@include resizableBackground('../imgs/background.jpg');
+
+              &:first-child{
+                margin-top: 9vh;
+              }
+              .textInPI{
+                color: black;
+                text-align: center;
+                display: block;
+                margin: 25% auto;
+                width: 40%;
+              }
+            }
           }
         }
-        //inserting clear here to fix float issues
-        //it ought to be hitting all LI tags
-        //clear: both;
       }
     }
   }
