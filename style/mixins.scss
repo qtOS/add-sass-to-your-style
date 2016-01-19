@@ -1,0 +1,56 @@
+//example
+@mixin halfSecAnimation {
+  -webkit-transition: all 500ms linear;
+  -moz-transition: all 500ms linear;
+  -ms-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+
+  &:hover{
+    -webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -ms-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+  }
+}
+//another form
+@mixin setTimeAnimation($time){
+  -webkit-transition: all $time linear;
+  -moz-transition: all $time linear;
+  -ms-transition: all $time linear;
+  -o-transition: all $time linear;
+  transition: all $time linear;
+
+  &:hover{
+    -webkit-transition: all $time linear;
+    -moz-transition: all $time linear;
+    -ms-transition: all $time linear;
+    -o-transition: all $time linear;
+    transition: all $time linear;
+  }
+}
+//get them all
+@mixin setAnimation($prop, $time, $func){
+  -webkit-transition: $prop $time $func;
+  -moz-transition: $prop $time $func;
+  -ms-transition: $prop $time $func;
+  -o-transition: $prop $time $func;
+  transition: $prop $time $func;
+
+  &:hover{
+    -webkit-transition: $prop $time $func;
+    -moz-transition: $prop $time $func;
+    -ms-transition: $prop $time $func;
+    -o-transition: $prop $time $func;
+    transition: $prop $time $func;
+  }
+}
+
+@mixin resizableBackground($url){
+  background: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+//scrollbar mixin from css-tricks
