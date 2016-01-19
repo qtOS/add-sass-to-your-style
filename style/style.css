@@ -1,7 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+.spacer {
+  width: 100%;
+  height: 5%; }
+
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-family: "Bitter", serif;
   background: url("../imgs/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -15,7 +21,6 @@ html, body {
     html nav .navItems, body nav .navItems {
       display: inline-block;
       font-size: 3vh;
-      background-color: blue;
       color: #fff;
       text-decoration: none;
       margin-left: 5%;
@@ -25,7 +30,8 @@ html, body {
     height: 87.75%;
     position: fixed;
     top: 12.25%;
-    overflow-y: hidden; }
+    overflow-y: hidden;
+    text-align: center; }
     html #content-container-foundation ul, body #content-container-foundation ul {
       margin: 0;
       padding: 0;
@@ -40,7 +46,7 @@ html, body {
         margin: 0;
         padding: 0;
         overflow-y: auto;
-        background-color: rgba(25, 25, 25, 0.4);
+        background-color: rgba(25, 25, 25, 0.1);
         color: white; }
         html #content-container-foundation ul li h1, body #content-container-foundation ul li h1 {
           margin: 0;
@@ -50,7 +56,38 @@ html, body {
           padding: 0; }
         html #content-container-foundation ul li #title-bar, body #content-container-foundation ul li #title-bar {
           width: 100%;
-          height: 40%;
-          background-color: rgba(55, 2, 111, 0.6); }
+          height: 41%;
+          margin-top: 12vh;
+          background-color: rgba(155, 102, 11, 0.8);
+          padding-top: 9%; }
+          html #content-container-foundation ul li #title-bar h1, body #content-container-foundation ul li #title-bar h1 {
+            margin-bottom: 2vh; }
+        html #content-container-foundation ul li #info-container, body #content-container-foundation ul li #info-container {
+          width: 95%;
+          height: 100%;
+          background-color: rgba(2, 2, 2, 0.6);
+          padding: 0 2.5%; }
+          html #content-container-foundation ul li #info-container article, body #content-container-foundation ul li #info-container article {
+            margin: 0;
+            width: 65%;
+            height: 80%;
+            background-color: red;
+            float: left;
+            margin-top: 7.5vh;
+            overflow-y: auto; }
+            html #content-container-foundation ul li #info-container article h1, html #content-container-foundation ul li #info-container article p, body #content-container-foundation ul li #info-container article h1, body #content-container-foundation ul li #info-container article p {
+              margin: 0;
+              padding: 0; }
+            html #content-container-foundation ul li #info-container article h1, html #content-container-foundation ul li #info-container article p, body #content-container-foundation ul li #info-container article h1, body #content-container-foundation ul li #info-container article p {
+              margin: 0 auto;
+              margin-bottom: 3vh;
+              width: 80%; }
+          html #content-container-foundation ul li #info-container aside, body #content-container-foundation ul li #info-container aside {
+            margin: 0;
+            width: 25%;
+            height: 80%;
+            background-color: blue;
+            float: right;
+            margin-top: 7.5vh; }
 
 /*# sourceMappingURL=style.css.map */
