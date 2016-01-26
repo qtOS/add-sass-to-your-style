@@ -1,0 +1,17 @@
+body {
+  color: white;
+  background: black; }
+  body #chat {
+    height: 500px; }
+  body #contentWrap {
+    display: none; }
+  body #chatWrap {
+    float: left;
+    border: 1px #000 solid; }
+  body .error {
+    color: red; }
+  body .whisper {
+    color: gray;
+    font-style: italic; }
+
+/*# sourceMappingURL=style.css.map */
